@@ -24,12 +24,8 @@
 		<a-marker-camera preset='hiro'>
 
 			<!-- Adding an OBJ file to an AR Project-->
-			 <a-assets>
-				<a-asset-item id="tree-obj" src="https://github.com/regidias2006/virtualreality/blob/master/model/Project_Screw_2.obj"></a-asset-item>
-				<a-asset-item id="tree-mtl" src="https://github.com/regidias2006/virtualreality/blob/master/model/Project_Screw_2.mtl"></a-asset-item>
-			  </a-assets>
+				<a-entity obj-model="obj: url(model/Project_Screw_2.obj); mtl: url(model/Project_Screw_2.mtl)"></a-entity>
 
-			  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
 		</a-marker-camera>
 		
 	</a-scene>
