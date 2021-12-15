@@ -1,38 +1,25 @@
+<!DOCTYPE html>
+<!-- include aframe -->
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="build/aframe-ar.js"></script>
 
-<!doctype HTML>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
-    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    
-    <!-- add this script in order to load a large set of 3D model extensions-->
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    
-    <body style='margin : 0px; overflow: hidden;'>
-	<h1>Hello Worold!</h1>
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - mobile performance in a-frame
+	<br/>
+	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+</div>
+	<!-- enable artoolkit on this scene -->
+	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
-        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<!-- define the object which gonna be put on this marker  -->
+		<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
+			<a-torus-knot radius='0.26' radius-tubular='0.05'
+			animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+			</a-torus-knot>
+		</a-box>
 
-        <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-        </a-assets>
-
-        <a-marker type='barcode' value='7'>
-            <a-box position='0 0.5 0' color="yellow"></a-box>
-        </a-marker>
-
-        <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-entity
-                gltf-model="#animated-asset"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
-        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-        <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
 </html>
