@@ -24,13 +24,14 @@
 		<a-marker-camera preset='hiro'>
 
 			<!-- Adding an OBJ file to an AR Project-->
-			<a-entity 
-			   obj-model="obj: url(model/Project_Screw.obj);
-			   mtl: url(model/Project_Name.mtl)">
-		    </a-entity>
+			 <a-assets>
+				<a-asset-item id="tree-obj" src="model/Project_Screw.obj"></a-asset-item>
+				<a-asset-item id="tree-mtl" src="model/Project_Name.mtl"></a-asset-item>
+			  </a-assets>
 
-
+			  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
 		</a-marker-camera>
+		
 	</a-scene>
 </body>
 </html>
