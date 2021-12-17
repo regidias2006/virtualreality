@@ -31,14 +31,16 @@
 		<a-marker-camera preset='hiro'>
 
 			<!-- Adding an OBJ file to an AR Project-->
-			 <a-entity scale="0.052 0.052 0.052" obj-model="obj: url(model/Project_Screw_2.obj); mtl: url(model/Project_Screw_2.mtl)"></a-entity> 
+			<!-- <a-entity scale="0.052 0.052 0.052" obj-model="obj: url(model/Project_Screw_2.obj); mtl: url(model/Project_Screw_2.mtl)"></a-entity>  -->
+
+				<!-- Adding Novo modelo de parafuso-->
+				<a-entity obj-model="obj: url(model/new_screw/Screw/screw.obj); mtl: url(model/new_screw/Screw/screw.mtl)"></a-entity> 
 
 			<!--Adding a glTF 2.0 model to your scene-->
 			<!-- <a-entity scale="0.052 0.052 0.052" gltf-model-next="src: url(model/drone/scene.gltf);"> </a-entity> -->
 			<!-- <a-entity gltf-model="#brainstem" scale="0.04 0.04 0.04"></a-entity> -->
 
 		</a-marker-camera>
-		
 	</a-scene>
 </body>
 </html>
