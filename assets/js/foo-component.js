@@ -2,9 +2,6 @@
 AFRAME.registerComponent('foo', {
     schema: {},
     init: function () {
-        this.el.addEventListener('click', () => {
-            alert('Clicked!')
-        });
         alert("iniciou");
         showUsers(1);
     },
@@ -22,9 +19,4 @@ AFRAME.registerComponent('foo', {
     }
   });
 
-  AFRAME.registerComponent('clickhandler', {
-    init: function() {
-        this.el.addEventListener('click', () => {
-            alert('Clicked!')
-        });
-}});
+ 
