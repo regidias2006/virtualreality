@@ -48,12 +48,13 @@ function showUsers(userspageId) {
                 var child = document.createElement("a-text");
                 child.setAttribute("id", "userNameText" + dt)
                 child.setAttribute("value", name);
-                child.setAttribute("position", position);
+                child.setAttribute("posit0ion", position);
                 child.setAttribute("rotation", "-90 0 0");
                 child.setAttribute("wrap-count", "90");
 
                 //child.setAttribute("onclick","showUserDetail("+obj.data[dt].id+")");
                 var existing_image = document.getElementById("userAvatar" + dt);
+                console.log("userAvatar" + dt);
                 if (existing_image) {
                     element.removeChild(existing_image);
                 }
@@ -61,6 +62,7 @@ function showUsers(userspageId) {
                 var image_avatar = obj.data[dt].avatar
                 var img_position = "-1.8 0.1 " + vertical;
                 var image_child = document.createElement("a-image");
+
                 image_child.setAttribute("id", "userAvatar" + dt)
                 image_child.setAttribute("src", image_avatar);
                 image_child.setAttribute("height", "0.25");
