@@ -70,7 +70,7 @@ function showUsers(userspageId) {
                 image_child.setAttribute("position", img_position);
                 image_child.setAttribute("rotation", "-90 0 0");
                 image_child.setAttribute("onclick", "showUserDetail(" + obj.data[dt].id + ")");
-
+                
                 element.appendChild(child);
                 element.appendChild(image_child);
             }
