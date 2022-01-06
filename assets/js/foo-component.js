@@ -18,3 +18,10 @@ AFRAME.registerComponent('foo', {
       size: {type: 'int', default: 5}
     }
   });
+
+  AFRAME.registerComponent('clickhandler', {
+    init: function() {
+        this.el.addEventListener('click', () => {
+            alert('Clicked!')
+        });
+}});
