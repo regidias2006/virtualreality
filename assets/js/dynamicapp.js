@@ -23,9 +23,6 @@ function hideUserDetails() {
 }
 
 function showUsers(userspageId) {
-
-    alert("Entrou nos usuários");
-
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -87,6 +84,7 @@ function showUsers(userspageId) {
 }
 
 function showUserDetail(userId) {
+    alert("Entrou user detail")
     var userDetailResponse = "unedited text";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
