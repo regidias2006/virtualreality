@@ -8,7 +8,7 @@
 
 <body>
 
-    <a-scene id="myscene" cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;' raycaster="objects: [clickhandler];"
+    <a-scene id="myscene" cursor='rayOrigin: mouse; fuse: false; fuseTimeout: 0;' raycaster="objects: [clickhandler];"
         vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
         <a-marker preset="hiro" type="pattern" markerhandler emitevents="true" id="animated-marker">
@@ -25,7 +25,7 @@
 
 
 
-        <a-entity camera cursor="rayOrigin: mouse">
+        <a-entity camera>
             <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
         </a-entity>
     </a-scene>
