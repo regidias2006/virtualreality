@@ -66,8 +66,8 @@ function showUsers(userspageId) {
                 var img_position = "-1.8 0.1 " + vertical;
                 var image_child = document.createElement("a-image");
 
-                image_child.setAttribute("id", "userAvatar" + dt);
                 image_child.setAttribute("clickhandler", "")
+                image_child.setAttribute("id", "userAvatar" + dt);
                 image_child.setAttribute("src", image_avatar);
                 image_child.setAttribute("height", "0.25");
                 image_child.setAttribute("width", "0.25");
