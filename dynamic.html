@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
 <script
-    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 <script
     src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 <script src="assets/js/dynamicapp.js"></script>
@@ -21,14 +21,13 @@
       
         <a-text id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue" wrap-count="80"></a-text>
   
-        <a-text id="dynamictext" value="1.6" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
+        <a-text id="dynamictext" value="1.7" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
       </a-marker>
       
       <a-entity camera>
        
       </a-entity>
-        <a-entity cursor="rayOrigin: mouse;fuse: true; fuseTimeout: 500"
-                    position="0 0 -1"
+        <a-entity cursor="rayOrigin: mouse"
                     geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
                     material="color: black; shader: flat">
         </a-entity>
