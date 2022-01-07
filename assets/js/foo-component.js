@@ -2,7 +2,7 @@
 AFRAME.registerComponent('foo', {
     schema: {},
     init: function () {
-        alert("iniciou");
+     //   alert("iniciou");
         showUsers(1);
     },
     update: function () {},

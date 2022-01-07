@@ -24,7 +24,7 @@ function hideUserDetails() {
 
 function showUsers(userspageId) {
 
-    alert("Entrou");
+    ///alert("Entrou");
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
