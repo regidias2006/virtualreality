@@ -10,7 +10,7 @@
 
 <body >
   
-    <h3>V1.0</h3>
+ 
     <a-scene id="myscene" embedded arjs="sourceType: webcam; " >
                                    
       <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" raycaster="objects: [data-raycastable]" id="animated-marker">
@@ -20,7 +20,7 @@
       
         <a-text id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue" wrap-count="80"></a-text>
   
-      
+        <a-text id="dynamictext" value="1.0" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
       </a-marker>
       
       <a-entity camera></a-entity>
