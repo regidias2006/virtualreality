@@ -2,6 +2,7 @@
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
 <script
     src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 <script src="assets/js/dynamicapp.js"></script>
 <script src="assets/js/foo-component.js"></script>
 <script src="build/aframe-ar.js"></script>
@@ -23,7 +24,7 @@
 
         </a-marker>
 
-        <a-entity camera >
+        <a-entity camera mouse-cursor>
             <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1"
                 geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
             </a-entity>
