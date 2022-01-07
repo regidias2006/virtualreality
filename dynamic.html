@@ -8,31 +8,23 @@
 <script src="assets/js/foo-component.js"></script>
 <script src="build/aframe-ar.js"></script>
 
-<body>
+<body >
+  
+    <a-scene id="myscene" embedded arjs="sourceType: webcam; " >
+                                   
+      <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" id="animated-marker">
+    
+        <a-box click-listener-component></a-box>
 
-    <a-scene id="myscene" embedded arjs="sourceType: webcam; " cursor="rayOrigin: mouse; fuse:false">
-
-        <a-marker preset="hiro" type="pattern" markerhandler emitevents="true" id="animated-marker">
-
-            <!-- <a-image id="UserDetailAvatar"
-                src="https://img.buzzfeed.com/buzzfeed-static/static/2018-06/19/17/asset/buzzfeed-prod-web-04/sub-buzz-9154-1529444543-1.jpg"
-                rotation="-90 0 0" position="0 0.2 0"></a-image> -->
-            <a-box position="0 3.5 -2" rotation="30 30 0" color="skyblue"
-                event-set__enter="_event: mouseenter; material.color: yellowgreen; scale: 3 1 1"
-                event-set__leave="_event: mouseleave; material.color: skyblue; scale: 1 1 1">
-                <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
-            </a-box>
-
-            <a-text foo id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue"
-                wrap-count="80"></a-text>
-
-
-        </a-marker>
-
-        <a-entity camera mouse-cursor>
-            <a-cursor fuse="false" color="yellow"></a-cursor>
-        </a-entity>
-
+       <a-image id="UserDetailAvatar" src="https://img.buzzfeed.com/buzzfeed-static/static/2018-06/19/17/asset/buzzfeed-prod-web-04/sub-buzz-9154-1529444543-1.jpg" 
+                  rotation="-90 0 0" position="0 0.2 0" ></a-image>
+      
+        <a-text id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue" wrap-count="80"></a-text>
+  
+      
+      </a-marker>
+      
+      <a-entity camera></a-entity>
     </a-scene>
-
-</body>
+    
+  </body>
