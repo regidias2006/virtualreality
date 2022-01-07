@@ -67,7 +67,7 @@ function showUsers(userspageId) {
                 var image_child = document.createElement("a-image");
 
                 // image_child.setAttribute("clickhandler", "")
-                image_child.setAttribute('cursor', 'rayOrigin', 'mouse');
+                //image_child.setAttribute('cursor', 'rayOrigin', 'mouse');
                 image_child.setAttribute("id", "userAvatar" + dt);
                 image_child.setAttribute("src", image_avatar);
                 image_child.setAttribute("height", "0.25");
