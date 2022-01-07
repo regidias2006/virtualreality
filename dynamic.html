@@ -2,8 +2,6 @@
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
 <script
     src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script
-    src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 <script src="assets/js/dynamicapp.js"></script>
 <script src="assets/js/foo-component.js"></script>
 <script src="build/aframe-ar.js"></script>
@@ -11,9 +9,9 @@
 <body >
   
  
-    <a-scene id="myscene" embedded arjs="sourceType: webcam; " >
+    <a-scene id="myscene" embedded arjs="sourceType: webcam; " cursor="rayOrigin: mouse; fuse:false">
                           
-      <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" raycaster="objects: [data-raycastable]" id="animated-marker">
+      <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true"  raycaster="objects: [data-raycastable]" id="animated-marker">
         
        
        <a-image foo id="UserDetailAvatar" src="https://img.buzzfeed.com/buzzfeed-static/static/2018-06/19/17/asset/buzzfeed-prod-web-04/sub-buzz-9154-1529444543-1.jpg" 
@@ -21,17 +19,12 @@
       
         <a-text id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue" wrap-count="80"></a-text>
   
-        <a-text id="dynamictext" value="1.8" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
+        <a-text id="dynamictext" value="1.9" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
       </a-marker>
       
       <a-entity camera>
        
       </a-entity>
-        <a-entity cursor="rayOrigin: mouse;fuse: true; fuseTimeout: 500"
-                    position="0 0 -1"
-                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                    material="color: black; shader: flat">
-        </a-entity>
     </a-scene>
     <script>
         // const scene = AFRAME.scenes[0];
