@@ -12,7 +12,7 @@
   
     <a-scene id="myscene" embedded arjs="sourceType: webcam; " >
                                    
-      <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" raycaster="objects: [data-raycastable]" id="animated-marker">
+      <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" raycaster="objects: .cursor-listener" id="animated-marker">
     
        <a-image id="UserDetailAvatar" src="https://img.buzzfeed.com/buzzfeed-static/static/2018-06/19/17/asset/buzzfeed-prod-web-04/sub-buzz-9154-1529444543-1.jpg" 
                 rotation="-90 0 0" position="0 0.2 0" ></a-image>
