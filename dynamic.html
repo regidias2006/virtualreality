@@ -12,20 +12,22 @@
   
  
     <a-scene id="myscene" embedded arjs="sourceType: webcam; " >
-                                   
+                          
       <a-marker  preset="hiro" type="pattern"  markerhandler emitevents="true" cursor="rayOrigin: mouse; fuse:false" raycaster="objects: [data-raycastable]" id="animated-marker">
-        <a-entity cursor="rayOrigin: mouse"></a-entity>
+        
+       
        <a-image foo id="UserDetailAvatar" src="https://img.buzzfeed.com/buzzfeed-static/static/2018-06/19/17/asset/buzzfeed-prod-web-04/sub-buzz-9154-1529444543-1.jpg" 
                   rotation="-90 0 0" position="0 0.2 0" ></a-image>
       
         <a-text id="dynamictext" value="Users" rotation="-90 0 0" position="-1.6 0.1 -0.35" color="blue" wrap-count="80"></a-text>
   
-        <a-text id="dynamictext" value="1.2" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
+        <a-text id="dynamictext" value="1.3" rotation="-90 0 0" position="-2.6 0.1 -0.35" color="green" wrap-count="80"></a-text>
       </a-marker>
       
       <a-entity camera>
 
       </a-entity>
+      <a-entity cursor cursor="rayOrigin: mouse"></a-entity>
     </a-scene>
     <script>
         // const scene = AFRAME.scenes[0];
